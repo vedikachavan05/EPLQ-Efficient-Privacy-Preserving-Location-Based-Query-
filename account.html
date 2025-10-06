@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPLQ - Account Management</title>
+    <link rel="stylesheet" href="styles/admindash.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="logo">EPLQ User</div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="user.html">Dashboard</a></li>
+                    <li class="active"><a href="account.html">Account</a></li>
+                    <li><a href="#" id="logout-link">Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="header">
+                <h1>Account Management</h1>
+            </header>
+
+            <section class="card-section">
+                <div class="card">
+                    <h2>Change Password</h2>
+                    
+                    <form id="change-password-form">
+                        <p>Enter your new password:</p>
+                        <input type="password" id="new-password" placeholder="New Password (min 6 characters)" required>
+                        <input type="password" id="confirm-password" placeholder="Confirm New Password" required>
+                        <button type="submit">Update Password</button>
+                    </form>
+                    
+                    <div id="account-status"></div>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <script type="module" src="scripts/user.js"></script>
+    <script type="module" src="scripts/account.js"></script>
+</body>
+</html>

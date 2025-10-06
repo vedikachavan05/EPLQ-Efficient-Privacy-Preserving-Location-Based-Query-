@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPLQ - Admin Dashboard</title>
+    <link rel="stylesheet" href="styles/admindash.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="logo">EPLQ Admin</div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active"><a href="admin.html">Dashboard</a></li>
+                    <li><a href="manage_user.html">Manage Users</a></li>
+                    <li><a href="setting.html">Setting</a></li>
+                    <li><a href="#" id="logout-link">Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="header">
+                <h1>Admin Dashboard</h1>
+            </header>
+
+            <section class="card-section">
+                <div class="card">
+                    <h2>Upload POI Data</h2>
+                    <form id="upload-form">
+                        <input type="text" id="poi-name" placeholder="POI Name" required>
+                        <input type="number" id="poi-latitude" step="any" placeholder="Latitude" required>
+                        <input type="number" id="poi-longitude" step="any" placeholder="Longitude" required>
+                        <button type="submit">Upload POI</button>
+                    </form>
+                </div>
+            </section>
+       
+        </main>
+    </div>
+    <script type="module" src="scripts/admin.js"></script>
+</body>
+</html>

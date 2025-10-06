@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPLQ - User Dashboard</title>
+    <link rel="stylesheet" href="styles/admindash.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="logo">EPLQ User</div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active"><a href="#">Dashboard</a></li>
+                    <li><a href="account.html">Account</a></li>
+                    <li><a href="#" id="logout-link">Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="header">
+                <h1>User Dashboard</h1>
+            </header>
+
+            <section class="card-section">
+                <div class="card">
+                    <h2>Find Nearby Places</h2>
+
+                    <form id="location-form">
+                        
+                         <button type="button" id="get-location-btn">Get My Location</button>
+                        <p>... or enter manually:</p>
+                      <input type="number" id="user-latitude" step="any" placeholder="Enter your Latitude" required>
+                    <input type="number" id="user-longitude" step="any" placeholder="Enter your Longitude" required>
+                     <button type="submit">Search</button>
+                </form>
+                       
+                </div>
+            </section>
+
+            <section class="card-section">
+    <div class="card">
+        <h2>Nearby POIs</h2>
+        <div id="results-container">
+            <p>Enter your location and click Search to find nearby POIs.</p>
+        </div>
+    </div>
+</section>
+
+        </main>
+    </div>
+    
+    <script type="module" src="scripts/user.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPLQ - Manage Users</title>
+    <link rel="stylesheet" href="styles/admindash.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="logo">EPLQ Admin</div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="admin.html">Dashboard</a></li>
+                    <li class="active"><a href="manage-users.html">Manage Users</a></li>
+                    <li><a href="setting.html">Settings</a></li>
+                    <li><a href="#" id="logout-link" >Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="header">
+                <h1>Manage Users</h1>
+            </header>
+
+            <section class="card-section">
+                <div class="card">
+                    <h2>User Account Management</h2>
+                    
+                    <div id="users-container">
+                        <div style="padding: 15px; border: 1px solid #ffcc00; background-color: #fffacd; color: #8a6d3b;">
+                            <p><strong>Note:</strong> Retrieving all user accounts from Firebase requires the **Admin SDK** (a server-side environment) for security reasons.</p>
+                            <p>For this client-side application, we confirm the feature's location and security limitations.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <script type="module" src="scripts/admin.js"></script>
+</body>
+</html>

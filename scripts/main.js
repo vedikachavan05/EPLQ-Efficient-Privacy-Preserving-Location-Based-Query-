@@ -2,7 +2,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
 import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
 
-// Your web app's Firebase configuration
+// firebase congig
 const firebaseConfig = {
     apiKey: "AIzaSyDz4XvrwVbE5vXFSxNm0MHKVXuR3lt49d0",
     authDomain: "eplq-b85ac.firebaseapp.com",
@@ -69,9 +69,15 @@ loginForm.addEventListener('submit', function(event) {
         .then((userCredential) => {
             // Signed in
             const user = userCredential.user;
-            console.log("User logged in:", user.email);
-            alert("Login successful! Welcome " + user.email);
-            // Here you can redirect the user or perform other actions
+
+            // Redirect based on user type
+            if (email === "admin2006@gmail.com") {
+                console.log("Admin logged in. Redirecting...");
+                window.location.href = "admin.html";
+            } else {
+                console.log("User logged in. Redirecting...");
+                window.location.href = "user.html";
+            }
         })
         .catch((error) => {
             const errorCode = error.code;
